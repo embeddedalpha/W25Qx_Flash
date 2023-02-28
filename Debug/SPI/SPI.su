@@ -1,0 +1,6 @@
+../SPI/SPI.c:10:6:SPI_DeInit	8	static
+../SPI/SPI.c:27:6:SPI_Init	8	static
+../SPI/SPI.c:157:6:SPI_CSS_Low	8	static
+../SPI/SPI.c:163:6:SPI_CSS_High	8	static
+../SPI/SPI.c:170:5:SPI_TRX_Data	16	static
+../SPI/SPI.c:185:14:SPI_DMA_Check_Base	16	static

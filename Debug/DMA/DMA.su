@@ -1,0 +1,2 @@
+../DMA/DMA.c:13:5:DMA_Init	24	static
+../DMA/DMA.c:84:5:DMA_Trigger	24	static

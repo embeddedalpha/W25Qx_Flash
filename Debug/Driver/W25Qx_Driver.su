@@ -1,0 +1,13 @@
+../Inc/main.h:93:26:Delay_us	16	static
+../Driver/W25Qx_Driver.c:41:13:Read_Status_Register	104	static
+../Driver/W25Qx_Driver.c:73:12:Write_Enable	96	static
+../Driver/W25Qx_Driver.c:92:12:Write_Disable	96	static
+../Driver/W25Qx_Driver.c:111:5:W25Qx_Chip_Erase	88	static
+../Driver/W25Qx_Driver.c:124:5:W25Qx_Block_Erase_4KB	96	static
+../Driver/W25Qx_Driver.c:141:5:W25Qx_Block_Erase_32KB	96	static
+../Driver/W25Qx_Driver.c:160:5:W25Qx_Block_Erase_64KB	96	static
+../Driver/W25Qx_Driver.c:183:6:W25Qx_Release_Power_Down	88	static
+../Driver/W25Qx_Driver.c:191:6:W25QX_Init	88	static
+../Driver/W25Qx_Driver.c:214:6:W25QX_Read	112	static
+../Driver/W25Qx_Driver.c:230:6:W25Qx_Write_Page	112	static
+../Driver/W25Qx_Driver.c:246:5:W25Qx_Read_Page	104	static
