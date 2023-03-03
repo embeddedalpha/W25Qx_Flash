@@ -9,7 +9,7 @@
 ## W25Q32
 ### Organized into 16,384 programmable pages of 256-bytes each
 
-### xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+### xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 ## GENERAL DESCRIPTION
 <h3> 
@@ -18,7 +18,7 @@ supported allowing equivalent clock rates of 160MHz for Dual Output and 320MHz f
 when using the Fast Read Dual/Quad Output instructions.
 </h3>
 
-### xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+### xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 ## Standard, Dual or Quad SPI
 <h3> 
 <li> Standard SPI: CLK, /CS, DI, DO, /WP, /Hold
@@ -26,7 +26,7 @@ when using the Fast Read Dual/Quad Output instructions.
 <li> Quad SPI: CLK, /CS, IO0, IO1, IO2, IO3
 </h3>
 
-### xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+### xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 ## Highest Performance Serial Flash 
 <h3> 
 <li> Up to 6X that of ordinary Serial Flash
@@ -38,7 +38,7 @@ when using the Fast Read Dual/Quad Output instructions.
 <li> Comparable to X16 Parallel Flash
 </h3>
 
-### xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+### xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 <h3> 
 <li> Software and Hardware Write-Protect
 <li> Top or Bottom, Sector or Block selection
@@ -46,4 +46,4 @@ when using the Fast Read Dual/Quad Output instructions.
 <li> 64-Bit Unique ID for each device
 </h3>
 
-### xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+### xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
