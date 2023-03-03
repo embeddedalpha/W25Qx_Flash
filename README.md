@@ -1,12 +1,12 @@
 # W25Qx Winbond SPI Flash
 
-## W25Q80
+## [W25Q80]('https://www.mouser.com/datasheet/2/949/w25q80dv_dl_revh_10022015-1489677.pdf') 
 #### Organized into 4,096 programmable pages of 256-bytes each.
 
-## W25Q16
+## [W25Q16]('https://www.digikey.com/htmldatasheets/production/3221237/0/0/1/W25Q16JV.pdf')
 #### Organized into 8,192 programmable pages of 256-bytes each. 
 
-## W25Q32
+## [W25Q32]('https://www.elinux.org/images/f/f5/Winbond-w25q32.pdf') 
 #### Organized into 16,384 programmable pages of 256-bytes each
 
 ### xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
