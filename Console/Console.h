@@ -15,7 +15,7 @@
 #define Printf_DMA	DMA2_Stream7_IRQHandler()
 
 
-  void Console_Init(USART_TypeDef *port,int baudrate);
+  void Console_Init(USART_TypeDef *port,int32_t baudrate);
   void printConsole(USART_TypeDef *port,char *msg, ...);
   void printConsole2(USART_TypeDef *port,char *msg);
 

@@ -15,7 +15,7 @@ int callback = 0;
 
 
 
- void Console_Init(USART_TypeDef *port,int baudrate)
+ void Console_Init(USART_TypeDef *port,int32_t baudrate)
 {
 	if(port == USART1)
 	{
@@ -27,7 +27,7 @@ int callback = 0;
 		GPIO_Pin_Setup(GPIOA, 9, ALTERNATE_FUNCTION_OUTPUT_PUSHPULL, USART1_TX);
 		GPIO_Pin_Setup(GPIOA, 10, ALTERNATE_FUNCTION_OUTPUT_OPENDRAIN, USART1_RX);
 
-		port ->BRR |= (int)(84000000 / (16 * 460800)) << 4;
+		port ->BRR |= (int)(84000000 / (16 * baudrate)) << 4;
 		port -> CR1 |= USART_CR1_TE | USART_CR1_RE;
 		port -> CR1 |= USART_CR1_UE;
 

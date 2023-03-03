@@ -16,44 +16,23 @@
 #include "W25Qx_Driver.h"
 
 
-
+W25Qx_Typedef W25QX16;
 
 int main(void)
 {
+	W25QX16.SPI_Port = SPI1;
+	W25QX16.pin_remap = true;
 
 	MCU_Clock_Setup();
-	Console_Init(USART1, 115200);
+	Console_Init(USART1, 460800);
 	Delay_Config();
 
-	W25QX_Init(SPI1, 1);
+
+	W25QX_Init(&W25QX16);
 	W25Qx_Chip_Erase();
-//	W25Qx_Block_Erase_32KB(0x000000);
-//	W25QX_Read(&MF, &ID);
 
-	int *data[255];
-
-	for(int i = 0; i < 255; i++)
-	{
-		*data[i] = i+1;
-	}
-
-	W25Qx_Write_Page(0x000000, data, 255);
-
-
-	int i = 0;
-
-    /* Loop forever */
 	for(;;)
 	{
-//		printConsole(USART1, "0x%x, 0x%x \r\n",MF,ID);
-		if((i % 255)==0)
-		{
-			printConsole(USART1,"\r\n");
-		}
-		printConsole(USART1, "0x%x,",W25Qx_Read_Page(i));
 
-
-		Delay_ms(10);
-		i++;
 	}
 }
