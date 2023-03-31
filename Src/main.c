@@ -20,6 +20,9 @@ W25Qx_Typedef W25QX16;
 
 int main(void)
 {
+	uint8_t data[] = {11,12,13,14,15,16,17,18,19,20};
+	uint8_t data1[10];
+	int len = 10;
 	W25QX16.SPI_Port = SPI1;
 	W25QX16.pin_remap = true;
 
@@ -27,9 +30,23 @@ int main(void)
 	Console_Init(USART1, 460800);
 	Delay_Config();
 
+	printConsole(USART1, "Hello \r\n");
+
+	int32_t address = 0x102030;
 
 	W25QX_Init(&W25QX16);
 	W25Qx_Chip_Erase();
+
+
+
+	Delay_s(1);
+
+
+	W25Qx_Write_Page(&W25QX16, address, &data[0], len);
+
+	W25Qx_Read_Page(&W25QX16, address, -1, &data1[0], len);
+
+
 
 	for(;;)
 	{
