@@ -11,23 +11,11 @@
 #include "main.h"
 #include "GPIO.h"
 #include "DMA.h"
+#include "SPI_Defines.h"
 
 
 
 
-#define SPI_Full_Duplex_Master    0
-#define SPI_Half_Duplex_Master_TX 1
-#define SPI_Half_Duplex_Master_RX 2
-
-#define SPI_Full_Duplex_Slave     3
-#define SPI_Half_Duplex_Slave_TX  4
-#define SPI_Half_Duplex_Slave_RX  5
-
-#define SPI_Frame_8Bit 0
-#define SPI_Frame_16Bit 1
-
-#define SPI_Master 1
-#define SPI_Slave 0
 
 
 
@@ -54,6 +42,8 @@ typedef struct SPI_Config
 
 void SPI_DeInit(SPI_Config SPI);
 void SPI_Init(SPI_Config SPI);
+void SPI_Enable_DMA(SPI_Config SPI);
+void SPI_Disable_DMA(SPI_Config SPI);
 void SPI_CSS_High(SPI_Config SPI);
 void SPI_CSS_Low(SPI_Config SPI);
 int SPI_TRX_Data(SPI_Config SPI, int data);

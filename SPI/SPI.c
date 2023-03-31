@@ -153,6 +153,15 @@ void SPI_Init(SPI_Config SPI)
 
 }
 
+void SPI_Enable_DMA(SPI_Config SPI)
+{
+	SPI.SPI -> CR2 |= (SPI.DMA_TX << SPI_CR2_TXDMAEN_Pos) | (SPI.DMA_RX << SPI_CR2_RXDMAEN_Pos);
+}
+void SPI_Disable_DMA(SPI_Config SPI)
+{
+	SPI.SPI -> CR2 &= ~((SPI.DMA_TX << SPI_CR2_TXDMAEN_Pos) | (SPI.DMA_RX << SPI_CR2_RXDMAEN_Pos));
+}
+
 
 void SPI_CSS_Low(SPI_Config SPI)
 {
