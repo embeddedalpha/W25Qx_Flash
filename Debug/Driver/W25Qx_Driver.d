@@ -5,8 +5,8 @@ Driver/W25Qx_Driver.o: ../Driver/W25Qx_Driver.c ../Driver/W25Qx_Driver.h \
  D:/Files/STM32F407_Workspace/W25Qx_Flash/SPI/SPI.h \
  D:/Files/STM32F407_Workspace/W25Qx_Flash/GPIO/GPIO.h \
  D:/Files/STM32F407_Workspace/W25Qx_Flash/DMA/DMA.h \
- D:/Files/STM32F407_Workspace/W25Qx_Flash/DMA/DMA_flags.h \
- D:/Files/STM32F407_Workspace/W25Qx_Flash/DMA/DMA_V1.h \
+ D:/Files/STM32F407_Workspace/W25Qx_Flash/DMA/DMA_Directives.h \
+ D:/Files/STM32F407_Workspace/W25Qx_Flash/SPI/SPI_Defines.h \
  D:/Files/STM32F407_Workspace/W25Qx_Flash/Console/Console.h
 ../Driver/W25Qx_Driver.h:
 ../Inc/main.h:
@@ -21,6 +21,6 @@ Driver/W25Qx_Driver.o: ../Driver/W25Qx_Driver.c ../Driver/W25Qx_Driver.h \
 D:/Files/STM32F407_Workspace/W25Qx_Flash/SPI/SPI.h:
 D:/Files/STM32F407_Workspace/W25Qx_Flash/GPIO/GPIO.h:
 D:/Files/STM32F407_Workspace/W25Qx_Flash/DMA/DMA.h:
-D:/Files/STM32F407_Workspace/W25Qx_Flash/DMA/DMA_flags.h:
-D:/Files/STM32F407_Workspace/W25Qx_Flash/DMA/DMA_V1.h:
+D:/Files/STM32F407_Workspace/W25Qx_Flash/DMA/DMA_Directives.h:
+D:/Files/STM32F407_Workspace/W25Qx_Flash/SPI/SPI_Defines.h:
 D:/Files/STM32F407_Workspace/W25Qx_Flash/Console/Console.h:

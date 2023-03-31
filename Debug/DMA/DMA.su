@@ -1,2 +1,8 @@
-../DMA/DMA.c:13:5:DMA_Init	24	static
-../DMA/DMA.c:84:5:DMA_Trigger	24	static
+../DMA/DMA.c:12:13:DMA_Flag_Update	16	static
+../DMA/DMA.c:114:5:DMA_Init	24	static
+../DMA/DMA.c:165:6:DMA_Set_Target	16	static
+../DMA/DMA.c:172:6:DMA_Enable	16	static
+../DMA/DMA.c:177:6:DMA_Disable	16	static
+../DMA/DMA.c:184:5:DMA_Trigger	24	static
+../DMA/DMA.c:251:6:DMA_Memory_To_Memory_Transfer	24	static
+../DMA/DMA.c:314:6:DMA_DeInit	16	static
