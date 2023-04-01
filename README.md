@@ -56,3 +56,17 @@ when using the Fast Read Dual/Quad Output instructions.
 </h4>
 
 ### xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+## Functions available for use:
+<h4> 
+<li> W25QX_Init
+<li> W25Qx_Release_Power_Down
+<li> W25Qx_Write_Byte
+<li> W25Qx_Store_Last_Position
+<li> W25Qx_Read_Last_Write_Poisition
+<li> W25Qx_Chip_Erase
+<li> W25Qx_Block_Erase
+<li> W25Qx_Read_Byte
+<li> W25Qx_Write_Page
+<li> W25Qx_Read_Page
+<li> W25Qx_Fast_Read_Page
+</h4>
