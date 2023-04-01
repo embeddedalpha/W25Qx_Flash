@@ -25,6 +25,8 @@ int main(void)
 	int len = 10;
 	W25QX16.SPI_Port = SPI1;
 	W25QX16.pin_remap = true;
+	W25QX16.nCSS_Port = GPIOA;
+	W25QX16.nCSS_Pin = 15;
 
 	MCU_Clock_Setup();
 	Console_Init(USART1, 460800);
