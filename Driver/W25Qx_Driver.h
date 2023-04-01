@@ -17,6 +17,8 @@
 
 typedef struct W25Qx_Typedef{
 	SPI_TypeDef *SPI_Port;
+	GPIO_TypeDef *nCSS_Port;
+	uint8_t nCSS_Pin;
 	bool pin_remap;
 	uint8_t Manufacturer_ID;
 	uint8_t Memory_Type;
@@ -24,6 +26,8 @@ typedef struct W25Qx_Typedef{
 	uint64_t Unique_ID;
 	uint64_t Last_Address;
 }W25Qx_Typedef;
+
+//val
 
 enum Blocks
 {

@@ -129,8 +129,8 @@ void W25QX_Init(W25Qx_Typedef *self)
 	W25QX.mode = SPI_Master;
 	W25QX.LSB_MSB = 0;
 	W25QX.frequency = 3;
-	W25QX.nCSS_Port = GPIOA;
-	W25QX.nCSS_pin = 15;
+	W25QX.nCSS_Port = self->nCSS_Port;
+	W25QX.nCSS_pin = self->nCSS_Pin;
 	W25QX.pin_remap = self->pin_remap;
 	W25QX.polarity = 1;
 	W25QX.phase = 1;
@@ -393,17 +393,11 @@ void W25Qx_Read_Page(W25Qx_Typedef *self,int32_t starting_address, int32_t endin
 
 
 	SPI_CSS_Low(W25QX);
-//	Delay_us(10);
 	DMA_Enable(&W25Qx_DMA);
 	DMA_Enable(&W25Qx_DMA_RX);
 
-	while((DMA2 -> LISR & (DMA_LISR_TCIF2_Msk)) == 0){}
-	DMA2 -> LIFCR |= DMA_LIFCR_CTCIF2;
-	DMA2 -> LIFCR |= DMA_LIFCR_CHTIF2;
-
-	while((DMA2 -> HISR & (DMA_HISR_TCIF5_Msk)) == 0){}
-	DMA2 -> HIFCR |= DMA_HIFCR_CTCIF5;
-	DMA2 -> HIFCR |= DMA_HIFCR_CHTIF5;
+	while(DMA_Check_TX_Complete_Flag(&W25Qx_DMA) == 5);
+	while(DMA_Check_TX_Complete_Flag(&W25Qx_DMA_RX) == 2);
 
 	SPI_CSS_High(W25QX);
 	DMA_Disable(&W25Qx_DMA);
@@ -414,7 +408,7 @@ void W25Qx_Read_Page(W25Qx_Typedef *self,int32_t starting_address, int32_t endin
 	return ret_value;
 }
 
-void W25Qx_Read_Page(W25Qx_Typedef *self,int32_t starting_address, int32_t ending_address, uint8_t *data, uint32_t length)
+void W25Qx_Fast_Read_Page(W25Qx_Typedef *self,int32_t starting_address, int32_t ending_address, uint8_t *data, uint32_t length)
 {
 	W25QX.DMA_TX = 1;
 	W25QX.DMA_RX = 1;
