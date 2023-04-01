@@ -169,6 +169,69 @@ void DMA_Set_Target(DMA_Init_Typedef *DMA_Config)
 	DMA_Config->Stream->NDTR = (uint16_t)(DMA_Config->data_length);
 }
 
+int DMA_Check_TX_Complete_Flag(DMA_Init_Typedef *DMA_Config)
+{
+	int ret = -1;
+	if(DMA_Config -> stream_temp == 0)
+	{
+		while((DMA_Config -> DMA_Port -> LISR & (DMA_LISR_TCIF0_Msk)) == 0){}
+		DMA_Config -> DMA_Port -> LIFCR |= DMA_LIFCR_CTCIF0;
+		DMA_Config -> DMA_Port -> LIFCR |= DMA_LIFCR_CHTIF0;
+		ret = 0;
+	}
+	else if(DMA_Config -> stream_temp == 1)
+	{
+		while((DMA_Config -> DMA_Port -> LISR & (DMA_LISR_TCIF1_Msk)) == 0){}
+		DMA_Config -> DMA_Port -> LIFCR |= DMA_LIFCR_CTCIF1;
+		DMA_Config -> DMA_Port -> LIFCR |= DMA_LIFCR_CHTIF1;
+		ret = 1;
+	}
+	else if(DMA_Config -> stream_temp == 2)
+	{
+		while((DMA_Config -> DMA_Port -> LISR & (DMA_LISR_TCIF2_Msk)) == 0){}
+		DMA_Config -> DMA_Port -> LIFCR |= DMA_LIFCR_CTCIF2;
+		DMA_Config -> DMA_Port -> LIFCR |= DMA_LIFCR_CHTIF2;
+		ret = 2;
+	}
+	else if(DMA_Config -> stream_temp == 3)
+	{
+		while((DMA_Config -> DMA_Port -> LISR & (DMA_LISR_TCIF3_Msk)) == 0){}
+		DMA_Config -> DMA_Port -> LIFCR |= DMA_LIFCR_CTCIF3;
+		DMA_Config -> DMA_Port -> LIFCR |= DMA_LIFCR_CHTIF3;
+		ret = 3;
+	}
+	else if(DMA_Config -> stream_temp == 4)
+	{
+		while((DMA_Config -> DMA_Port -> HISR & (DMA_HISR_TCIF4_Msk)) == 0){}
+		DMA_Config -> DMA_Port -> HIFCR |= DMA_HIFCR_CTCIF4;
+		DMA_Config -> DMA_Port -> HIFCR |= DMA_HIFCR_CHTIF4;
+		ret = 4;
+	}
+	else if(DMA_Config -> stream_temp == 5)
+	{
+		while((DMA_Config -> DMA_Port -> HISR & (DMA_HISR_TCIF5_Msk)) == 0){}
+		DMA_Config -> DMA_Port -> HIFCR |= DMA_HIFCR_CTCIF5;
+		DMA_Config -> DMA_Port -> HIFCR |= DMA_HIFCR_CHTIF5;
+		ret = 5;
+	}
+	else if(DMA_Config -> stream_temp == 6)
+	{
+		while((DMA_Config -> DMA_Port -> HISR & (DMA_HISR_TCIF6_Msk)) == 0){}
+		DMA_Config -> DMA_Port -> HIFCR |= DMA_HIFCR_CTCIF6;
+		DMA_Config -> DMA_Port -> HIFCR |= DMA_HIFCR_CHTIF6;
+		ret = 6;
+	}
+	else if(DMA_Config -> stream_temp == 7)
+	{
+		while((DMA_Config -> DMA_Port -> HISR & (DMA_HISR_TCIF7_Msk)) == 0){}
+		DMA_Config -> DMA_Port -> HIFCR |= DMA_HIFCR_CTCIF7;
+		DMA_Config -> DMA_Port -> HIFCR |= DMA_HIFCR_CHTIF7;
+		ret = 7;
+	}
+
+	return ret;
+}
+
 void DMA_Enable(DMA_Init_Typedef *DMA_Config)
 {
 	DMA_Config->Stream->CR |= DMA_SxCR_EN;
@@ -205,7 +268,7 @@ int DMA_Trigger(DMA_Init_Typedef *DMA_Config, bool blocking_enable)
 		}
 		else if(DMA_Config -> stream_temp == 2)
 		{
-	//		while((DMA_Config -> DMA_Port -> LISR & (DMA_LISR_TCIF2_Msk)) == 0){}
+			while((DMA_Config -> DMA_Port -> LISR & (DMA_LISR_TCIF2_Msk)) == 0){}
 			DMA_Config -> DMA_Port -> LIFCR |= DMA_LIFCR_CTCIF2;
 			DMA_Config -> DMA_Port -> LIFCR |= DMA_LIFCR_CHTIF2;
 		}

@@ -26,5 +26,6 @@ int DMA_Trigger(DMA_Init_Typedef *DMA_Config, bool blocking_enable);
 void DMA_Enable(DMA_Init_Typedef *DMA_Config);
 void DMA_Disable(DMA_Init_Typedef *DMA_Config);
 void DMA_Set_Target(DMA_Init_Typedef *DMA_Config);
+int DMA_Check_TX_Complete_Flag(DMA_Init_Typedef *DMA_Config);
 
 #endif /* DMA_H_ */
