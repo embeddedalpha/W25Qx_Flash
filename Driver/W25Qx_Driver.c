@@ -396,8 +396,8 @@ void W25Qx_Read_Page(W25Qx_Typedef *self,int32_t starting_address, int32_t endin
 	DMA_Enable(&W25Qx_DMA);
 	DMA_Enable(&W25Qx_DMA_RX);
 
-	while(DMA_Check_TX_Complete_Flag(&W25Qx_DMA) == 5);
-	while(DMA_Check_TX_Complete_Flag(&W25Qx_DMA_RX) == 2);
+	DMA_Check_TX_Complete_Flag(&W25Qx_DMA);
+	DMA_Check_TX_Complete_Flag(&W25Qx_DMA_RX);
 
 	SPI_CSS_High(W25QX);
 	DMA_Disable(&W25Qx_DMA);
