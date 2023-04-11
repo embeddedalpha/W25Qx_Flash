@@ -1,8 +1,9 @@
 ../DMA/DMA.c:12:13:DMA_Flag_Update	16	static
 ../DMA/DMA.c:114:5:DMA_Init	24	static
 ../DMA/DMA.c:165:6:DMA_Set_Target	16	static
-../DMA/DMA.c:172:6:DMA_Enable	16	static
-../DMA/DMA.c:177:6:DMA_Disable	16	static
-../DMA/DMA.c:184:5:DMA_Trigger	24	static
-../DMA/DMA.c:251:6:DMA_Memory_To_Memory_Transfer	24	static
-../DMA/DMA.c:314:6:DMA_DeInit	16	static
+../DMA/DMA.c:172:5:DMA_Check_TX_Complete_Flag	24	static
+../DMA/DMA.c:235:6:DMA_Enable	16	static
+../DMA/DMA.c:240:6:DMA_Disable	16	static
+../DMA/DMA.c:247:5:DMA_Trigger	24	static
+../DMA/DMA.c:314:6:DMA_Memory_To_Memory_Transfer	24	static
+../DMA/DMA.c:377:6:DMA_DeInit	16	static

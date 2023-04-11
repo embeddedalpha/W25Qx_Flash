@@ -10,6 +10,6 @@
 ../Driver/W25Qx_Driver.c:271:10:W25Qx_Read_Last_Write_Poisition	32	static
 ../Driver/W25Qx_Driver.c:283:6:W25Qx_Write_Page	408	static
 ../Driver/W25Qx_Driver.c:333:6:W25Qx_Read_Page	408	static
-../Driver/W25Qx_Driver.c:417:6:W25Qx_Fast_Read_Page	408	static
-../Driver/W25Qx_Driver.c:509:5:W25Qx_Chip_Erase	88	static
-../Driver/W25Qx_Driver.c:522:5:W25Qx_Block_Erase	96	static
+../Driver/W25Qx_Driver.c:411:6:W25Qx_Fast_Read_Page	408	static
+../Driver/W25Qx_Driver.c:503:5:W25Qx_Chip_Erase	88	static
+../Driver/W25Qx_Driver.c:516:5:W25Qx_Block_Erase	96	static
